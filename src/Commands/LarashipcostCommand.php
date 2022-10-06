@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace ThiccPan\Larashipcost\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class LarashipcostCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'larashipcost';
 
     public $description = 'My command';
 
