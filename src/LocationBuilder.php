@@ -1,9 +1,6 @@
-<?php 
+<?php
 
-  interface LocationBuilder
-  {
+interface LocationBuilder
+{
     public function setID(int $id): void;
-    
-  }
-
-?>
+}
