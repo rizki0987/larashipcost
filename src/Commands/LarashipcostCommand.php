@@ -12,7 +12,8 @@ class LarashipcostCommand extends Command
 
     public function handle(): string
     {
-        $data = "success";
+        $data = 'success';
+
         return $data;
     }
 }
