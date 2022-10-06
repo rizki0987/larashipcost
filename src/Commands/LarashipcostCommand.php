@@ -6,7 +6,7 @@ use Illuminate\Console\Command;
 
 class LarashipcostCommand extends Command
 {
-    public $signature = 'larashipcost';
+    public $signature = 'larashipcost {command}';
 
     public $description = 'My command';
 
