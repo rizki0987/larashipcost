@@ -10,10 +10,9 @@ class LarashipcostCommand extends Command
 
     public $description = 'My command';
 
-    public function handle(): int
+    public function handle(): string
     {
-        $this->comment('All done');
-
-        return self::SUCCESS;
+        $data = "success";
+        return $data;
     }
 }
