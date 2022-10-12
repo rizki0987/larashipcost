@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 namespace ThiccPan\Larashipcost;
 use ThiccPan\Larashipcost\LocationBuilder;
@@ -23,7 +23,7 @@ class ProvinsiLocationBuilder implements LocationBuilder
       
     ]);
 
-    dd($response->body());
+    return $response->body();
   }
 
   public function getAllProvinsi()
@@ -33,10 +33,6 @@ class ProvinsiLocationBuilder implements LocationBuilder
 
   public function getKey()
   {
-    dd(config('larashipcost.api_key'));
     return config('larashipcost.api_key');
   }
-
 }
-
-?>
