@@ -17,9 +17,8 @@ class LarashipcostServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('larashipcost')
-            ->hasConfigFile()
+            ->hasConfigFile('..\config\larashipcost')
             ->hasViews()
-            ->hasMigration('create_larashipcost_table')
             ->hasCommand(LarashipcostCommand::class);
     }
 }

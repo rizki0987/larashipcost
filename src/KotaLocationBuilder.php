@@ -3,8 +3,9 @@
 namespace ThiccPan\Larashipcost;
 use ThiccPan\Larashipcost\LocationBuilder;
 use Illuminate\Support\Facades\Http;
+use ThiccPan\Larashipcost\larashipcostConf as shipcostconfig;
 
-class ProvinsiLocationBuilder implements LocationBuilder
+class KotaLocationBuilder implements LocationBuilder
 {
   protected $id;
 
@@ -13,12 +14,12 @@ class ProvinsiLocationBuilder implements LocationBuilder
     $this->id = $id;
   }
 
-  public function getProvinsi()
+  public function getKota()
   {
     $response = Http::withHeaders([
       'key' => config('larashipcost.api_key')
       
-      ])->get('https://api.rajaongkir.com/starter/province', [
+      ])->get('https://api.rajaongkir.com/starter/city', [
       'id' => $this->id,
       
     ]);
@@ -26,15 +27,9 @@ class ProvinsiLocationBuilder implements LocationBuilder
     dd($response->body());
   }
 
-  public function getAllProvinsi()
+  public function getAllKota()
   {
     
-  }
-
-  public function getKey()
-  {
-    dd(config('larashipcost.api_key'));
-    return config('larashipcost.api_key');
   }
 
 }

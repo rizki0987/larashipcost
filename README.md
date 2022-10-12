@@ -82,3 +82,11 @@ Please review [our security policy](../../security/policy) on how to report secu
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+
+
+## How To Install
+- install with composer
+- publish the config key
+```bash
+php artisan vendor:publish --tag="larashipcost-config"
+```
