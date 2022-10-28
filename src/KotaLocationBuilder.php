@@ -11,6 +11,7 @@ class KotaLocationBuilder implements LocationBuilder
     public function setId($id): KotaLocationBuilder
     {
         $this->id = $id;
+
         return $this;
     }
 

@@ -11,6 +11,7 @@ class ProvinsiLocationBuilder implements LocationBuilder
     public function setId($idProvinsi): ProvinsiLocationBuilder
     {
         $this->id = $idProvinsi;
+
         return $this;
     }
 
