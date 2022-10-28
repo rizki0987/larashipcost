@@ -23,8 +23,8 @@ class KotaLocationBuilder implements LocationBuilder
 
         ]);
 
-    return $response->body();
-  }
+        return $response->body();
+    }
 
   public function getAllKota()
   {
