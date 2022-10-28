@@ -1,10 +1,8 @@
 <?php
 
-  namespace ThiccPan\Larashipcost;
+namespace ThiccPan\Larashipcost;
 
   interface LocationBuilder
   {
-    public function setID(int $id): void;
+      public function setID(int $id): void;
   }
-
-?>
