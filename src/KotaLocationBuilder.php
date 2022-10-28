@@ -24,12 +24,17 @@ class KotaLocationBuilder implements LocationBuilder
       
     ]);
 
-    dd($response->body());
+    return $response->body();
   }
 
   public function getAllKota()
   {
-    
+    $response = Http::withHeaders([
+      'key' => config('larashipcost.api_key')
+      
+      ])->get('https://api.rajaongkir.com/starter/city');
+
+      return $response->body();
   }
 
 }
