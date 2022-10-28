@@ -42,7 +42,8 @@ class ProvinsiLocationBuilder implements LocationBuilder
     }
 }
 
-enum Provinsi: int {
+enum Provinsi: int
+{
     case BALI = 1;
     case BANGKA_BELITUNG = 2;
     case BANTEN = 3;
