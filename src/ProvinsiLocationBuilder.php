@@ -30,9 +30,10 @@ class ProvinsiLocationBuilder implements LocationBuilder
     {
         $response = Http::withHeaders([
             'key' => config('larashipcost.api_key'),
-        ]) -> get('https://api.rajaongkir.com/starter/province');
 
-        return $response -> body();
+        ])->get('https://api.rajaongkir.com/starter/province');
+
+        return $response->body();
     }
 
     public function getKey()
