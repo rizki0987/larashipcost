@@ -15,24 +15,25 @@ class ProvinsiLocationBuilder implements LocationBuilder
 
     public function getProvinsi()
     {
-    $response = Http::withHeaders([
-      'key' => config('larashipcost.api_key')
-      
-      ])->get('https://api.rajaongkir.com/starter/province', [
-      'id' => $this->id,
-      
-    ]);
+        $response = Http::withHeaders([
+            'key' => config('larashipcost.api_key'),
+
+        ])->get('https://api.rajaongkir.com/starter/province', [
+            'id' => $this->id,
+
+        ]);
 
         return $response->body();
     }
 
     public function getAllProvinsi()
-    { 
-      $response = Http::withHeaders([
-        'key' => config('larashipcost.api_key')
-        
+    {
+        $response = Http::withHeaders([
+            'key' => config('larashipcost.api_key'),
+
         ])->get('https://api.rajaongkir.com/starter/province');
-      return $response->body();
+
+        return $response->body();
     }
 
     public function getKey()

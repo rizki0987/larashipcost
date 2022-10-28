@@ -28,9 +28,9 @@ class KotaLocationBuilder implements LocationBuilder
 
   public function getAllKota()
   {
-    $response = Http::withHeaders([
-      'key' => config('larashipcost.api_key')
-      
+      $response = Http::withHeaders([
+          'key' => config('larashipcost.api_key'),
+
       ])->get('https://api.rajaongkir.com/starter/city');
 
       return $response->body();
