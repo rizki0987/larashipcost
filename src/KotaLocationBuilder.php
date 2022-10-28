@@ -8,7 +8,7 @@ class KotaLocationBuilder implements LocationBuilder
 {
     protected $id;
 
-    public function setId(int $id): void
+    public function setId($id): void
     {
         $this->id = $id;
     }
