@@ -11,7 +11,6 @@ class Larashipcost
 
     public static function enumTest() {
         $builder = new ProvinsiLocationBuilder();
-        $builder -> setId(Provinsi::BALI);
-        $builder -> getProvinsi();
+        $builder->setId(Provinsi::BALI)->getProvinsi();
     }
 }
