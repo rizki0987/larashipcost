@@ -13,11 +13,14 @@ class ProvinsiLocationBuilder implements LocationBuilder
     public function setId($idProvinsi): ProvinsiLocationBuilder
     {
         $this->id = $idProvinsi;
+
         return $this;
     }
 
-    public function setIdFromEnum($case): self {
+    public function setIdFromEnum($case): self
+    {
         $this->id = $case->value;
+
         return $this;
     }
 
