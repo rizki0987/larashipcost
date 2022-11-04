@@ -18,7 +18,7 @@ class KotaLocationBuilder implements LocationBuilder
     public function getKota()
     {
         $response = Http::withHeaders([
-            'key' => $this -> getKey(),
+            'key' => $this->getKey(),
         ])->get('https://api.rajaongkir.com/starter/city', [
             'id' => $this->id,
         ]);
@@ -29,7 +29,7 @@ class KotaLocationBuilder implements LocationBuilder
   public function getAllKota()
   {
       $response = Http::withHeaders([
-          'key' => $this -> getKey(),
+          'key' => $this->getKey(),
 
       ])->get('https://api.rajaongkir.com/starter/city');
 
@@ -37,7 +37,7 @@ class KotaLocationBuilder implements LocationBuilder
   }
 
   private function getKey()
-    {
-        return config('larashipcost.api_key');
-    }
+  {
+      return config('larashipcost.api_key');
+  }
 }
