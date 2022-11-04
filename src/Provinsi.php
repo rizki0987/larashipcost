@@ -1,4 +1,5 @@
 <?php
+
 namespace ThiccPan\Larashipcost;
 
 enum Provinsi: int
