@@ -11,9 +11,12 @@ class ProvinsiLocationBuilder implements LocationBuilder
 
     public function setId($idProvinsi): ProvinsiLocationBuilder
     {
-        // Ambil value dari case enum
-        $this->id = $idProvinsi->value;
+        $this->id = $idProvinsi;
+        return $this;
+    }
 
+    public function setIdFromEnum($case): self {
+        $this->id = $case->value;
         return $this;
     }
 
