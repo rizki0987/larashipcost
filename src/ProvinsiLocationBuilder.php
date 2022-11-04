@@ -8,7 +8,7 @@ class ProvinsiLocationBuilder implements LocationBuilder
 {
     protected $id;
 
-    public function setId($idProvinsi): ProvinsiLocationBuilder
+    public function setId($idProvinsi): self
     {
         $this->id = $idProvinsi;
 
