@@ -7,7 +7,8 @@ use Illuminate\Support\Facades\Http;
 class ProvinsiLocationBuilder implements LocationBuilder
 {
     protected $id;
-    protected $api = "74992b910fdb480105a52aeb658e876c";
+
+    protected $api = '74992b910fdb480105a52aeb658e876c';
 
     public function setId($idProvinsi): ProvinsiLocationBuilder
     {
