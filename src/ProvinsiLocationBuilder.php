@@ -15,10 +15,17 @@ class ProvinsiLocationBuilder implements LocationBuilder
         return $this;
     }
 
+    public function setIdFromEnum($case): self
+    {
+        $this->id = $case->value;
+
+        return $this;
+    }
+
     public function getProvinsi()
     {
         $response = Http::withHeaders([
-            'key' => config('larashipcost.api_key'),
+            'key' => $this->api,
 
         ])->get('https://api.rajaongkir.com/starter/province', [
             'id' => $this->id,
@@ -31,7 +38,7 @@ class ProvinsiLocationBuilder implements LocationBuilder
     public function getAllProvinsi()
     {
         $response = Http::withHeaders([
-            'key' => config('larashipcost.api_key'),
+            'key' => $this->api,
 
         ])->get('https://api.rajaongkir.com/starter/province');
 
@@ -40,6 +47,6 @@ class ProvinsiLocationBuilder implements LocationBuilder
 
     public function getKey()
     {
-        return config('larashipcost.api_key');
+        return $this->api;
     }
 }
