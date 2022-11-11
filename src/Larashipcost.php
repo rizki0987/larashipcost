@@ -2,16 +2,49 @@
 
 namespace ThiccPan\Larashipcost;
 
-class Larashipcost
+use Illuminate\Support\Facades\Http;
+
+class Larashipcost implements InterfaceOngkirProvider, InterfaceProvinsiProvider
 {
-    public static function testFunc(): string
-    {
-        return 'method running';
+    protected $id;
+
+    public function setId($id): self {
+        $this->id = $id;
+        return $this;
     }
 
-    public static function enumTest()
+    public function getId() {
+        return $this->id;
+    }
+
+    // OVERRIDE
+    public static function testFunc(): string
     {
-        $builder = new ProvinsiLocationBuilder();
-        $builder->setId(Provinsi::BALI)->getProvinsi();
+        return 'method running pakai interface';
+    }
+
+    // OVERRIDE
+    public function getAllProvinsi()
+    {
+        
+    }
+
+    // OVERRIDE
+    public function getProvinsi($id)
+    {
+        $response = Http::withHeaders([
+            'key' => $this->getKey(),
+
+        ])->get('https://api.rajaongkir.com/starter/province', [
+            'id' => $id,
+
+        ]);
+
+        return $response->body();
+    }
+
+    private function getKey()
+    {
+        return config('larashipcost.api_key');
     }
 }
