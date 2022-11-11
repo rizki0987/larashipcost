@@ -4,7 +4,7 @@ namespace ThiccPan\Larashipcost;
 
 class RatuOngkirProvider extends Provider implements ProviderBuilder
 {
-    protected $url = "www.ratuongkir.com/";
+    protected $url = 'www.ratuongkir.com/';
 
     public function setIdProvinsi($idProvinsi): self
     {
@@ -43,9 +43,6 @@ class RatuOngkirProvider extends Provider implements ProviderBuilder
 
     public function getShippingCost()
     {
-
-
-
         return $this;
     }
 }

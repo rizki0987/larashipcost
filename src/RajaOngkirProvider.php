@@ -6,9 +6,7 @@ use Illuminate\Support\Facades\Http;
 
 class RajaOngkirProvider extends Provider implements ProviderBuilder
 {
-
-    protected $url = "https://api.rajaongkir.com/";
-
+    protected $url = 'https://api.rajaongkir.com/';
 
     public function setIdProvinsi($idProvinsi): self
     {
@@ -50,11 +48,11 @@ class RajaOngkirProvider extends Provider implements ProviderBuilder
         $response = Http::withHeaders([
             'key' => config('larashipcost.api_key'),
 
-        ])->post($this->url . 'starter/cost', [
+        ])->post($this->url.'starter/cost', [
             'origin' => $this->idKota,
             'destination' => $this->idDestination,
             'weight' => $this->weight,
-            'courier' => $this->courier
+            'courier' => $this->courier,
         ]);
 
         return $response->body();
