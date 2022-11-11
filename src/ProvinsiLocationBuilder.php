@@ -42,6 +42,8 @@ class ProvinsiLocationBuilder implements LocationBuilder
     {
         return config('larashipcost.api_key');
     }
+
+    // COBA LINTANG
 }
 
 enum Provinsi: int
