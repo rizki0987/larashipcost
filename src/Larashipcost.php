@@ -8,12 +8,15 @@ class Larashipcost implements InterfaceOngkirProvider, InterfaceProvinsiProvider
 {
     protected $id;
 
-    public function setId($id): self {
+    public function setId($id): self
+    {
         $this->id = $id;
+
         return $this;
     }
 
-    public function getId() {
+    public function getId()
+    {
         return $this->id;
     }
 
@@ -26,7 +29,6 @@ class Larashipcost implements InterfaceOngkirProvider, InterfaceProvinsiProvider
     // OVERRIDE
     public function getAllProvinsi()
     {
-        
     }
 
     // OVERRIDE

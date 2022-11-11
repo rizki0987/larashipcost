@@ -1,8 +1,8 @@
-<?php 
+<?php
 
 namespace ThiccPan\Larashipcost;
 
-interface InterfaceOngkirProvider {
+interface InterfaceOngkirProvider
+{
     public static function testFunc(): string;
 }
-?>

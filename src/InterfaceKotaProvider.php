@@ -1,9 +1,10 @@
-<?php 
+<?php
 
 namespace ThiccPan\Larashipcost;
 
-interface InterfaceKotaProvider {
+interface InterfaceKotaProvider
+{
     public function getKota();
+
     public function getAllKota();
 }
-?>
