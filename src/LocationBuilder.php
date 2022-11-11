@@ -4,5 +4,5 @@ namespace ThiccPan\Larashipcost;
 
 interface LocationBuilder
 {
-    public function setID($id): LocationBuilder;
+    public function setId($id): LocationBuilder;
 }
