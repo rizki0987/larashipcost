@@ -51,4 +51,5 @@ class ProvinsiLocationBuilder implements LocationBuilder
     }
 
     // COBA LINTANG
+    // COBA IVAN
 }
