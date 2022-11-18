@@ -4,7 +4,7 @@ namespace ThiccPan\Larashipcost;
 
 use Illuminate\Support\Facades\Http;
 
-class RajaOngkirProvider extends Provider implements ProviderBuilder
+class RajaOngkirProvider extends Provider implements ProviderBuilder, ProvinsiBuilder, KotaBuilder
 {
     protected $url = 'https://api.rajaongkir.com/';
 
@@ -55,6 +55,26 @@ class RajaOngkirProvider extends Provider implements ProviderBuilder
             'courier' => $this->courier,
         ]);
 
+        return $response->body();
+    }
+
+    public function getProvinsi()
+    {
+        $response = Http::withHeaders([
+            'key' => config('larashipcost.api_key'),
+
+        ])->get('https://api.rajaongkir.com/starter/province');
+
+        return $response->body();
+    }
+
+    public function getKota()
+    {
+        $response = Http::withHeaders([
+            'key' => config('larashipcost.api_key'),
+  
+        ])->get('https://api.rajaongkir.com/starter/city');
+  
         return $response->body();
     }
 }
