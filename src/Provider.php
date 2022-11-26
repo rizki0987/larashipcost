@@ -29,3 +29,11 @@ abstract class Provider
 
     protected $courier;
 }
+
+interface ProvinsiBuilder {
+    public function getProvinsi();
+}
+
+interface KotaBuilder {
+    public function getKota();
+}
