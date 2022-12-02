@@ -4,7 +4,7 @@ namespace ThiccPan\Larashipcost;
 
 use Illuminate\Support\Facades\Http;
 
-class RatuOngkirProvider extends Provider implements ProviderBuilder
+class RatuOngkirProvider extends Provider implements ProviderBuilder, ProvinsiBuilder, KotaBuilder
 {
     protected $url = 'https://636dcc52b567eed48ac95a16.mockapi.io/ratuongkir';
 
@@ -91,8 +91,6 @@ class RatuOngkirProvider extends Provider implements ProviderBuilder
     public function getAllKota()
     {
         $response = Http::get($this->url
-            . "/provinsi/"
-            . $this->idProvinsi
             . "/kota");
 
         return $response->body();
@@ -127,8 +125,7 @@ class RatuOngkirProvider extends Provider implements ProviderBuilder
         $latDelta = $latTo - $latFrom;
         $lonDelta = $lonTo - $lonFrom;
 
-        $angle = 2 * asin(sqrt(pow(sin($latDelta / 2), 2) +
-            cos($latFrom) * cos($latTo) * pow(sin($lonDelta / 2), 2)));
+        $angle = 2 * asin(sqrt(pow(sin($latDelta / 2), 2) + cos($latFrom) * cos($latTo) * pow(sin($lonDelta / 2), 2)));
         return $angle * $earthRadius;
     }
 
