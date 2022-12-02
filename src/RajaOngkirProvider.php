@@ -4,8 +4,8 @@ namespace ThiccPan\Larashipcost;
 
 use Illuminate\Support\Facades\Http;
 
-class RajaOngkirProvider extends Provider implements ProviderBuilder, ProvinsiBuilder, KotaBuilder
-{
+class RajaOngkirProvider extends Provider implements ProviderBuilder, ProvinsiBuilder, KotaBuilder {
+
     protected $url = 'https://api.rajaongkir.com/';
 
     public function setIdProvinsi($idProvinsi): self
