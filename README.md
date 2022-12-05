@@ -406,12 +406,12 @@ $value = $rajaOngkir
 
 ## Credits
 
-- [ThiccPan](https://github.com/ThiccPan)
-- [ibrahimss02](https://github.com/ibrahimss02)
-- [AlfitoDimasss](https://github.com/AlfitoDimasss)
-- [lintangtrisnadi](https://github.com/lintangtrisnadi)
-- [rizki0987](https://github.com/rizki0987)
-- [joviar27](https://github.com/joviar27)
+- [ThiccPan](https://github.com/ThiccPan) - Ivan Hilmi Derian 
+- [ibrahimss02](https://github.com/ibrahimss02) - Ibrahim Sambata Sarborn
+- [AlfitoDimasss](https://github.com/AlfitoDimasss) - Alfito Dimas Prasetyo
+- [lintangtrisnadi](https://github.com/lintangtrisnadi) - Lintang Trisnadi
+- [rizki0987](https://github.com/rizki0987) - Rizki Ali Ramadhan
+- [joviar27](https://github.com/joviar27) - Joy Vianoktya Aristides
 
 ## License
 
